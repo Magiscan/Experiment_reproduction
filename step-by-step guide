@@ -1,1 +1,27 @@
 Step-by-step guide
+Requirements:
+-	OBS studio Installed to our laptop.
+-	Caption capture plug-in required for OBS studio.
+Connections:
+-	Connect the spacemouse and robot arm to the Katana2 laptop via cable.
+-	Connect the GoPro9 (attached to the robot end effector) to our own laptop via cable. 
+-	Connect our laptop to the screen in front of the participant via HDMI and extend the visual so both participants and us can see the feed from the camera through OBS studio.
+Katana2 laptop:
+-	Turn on the robot arm and wait until the light at the base of the robot is blue.
+-	To start the robot, open a browser and input the IP of the robot (172.16.0.2) to get to the robot interface.
+-	On the top right corner of the interface select “FCI activate” – the light should turn green
+-	Unlock the robot’s joints – now the robot is ready to use.
+-	To make the spacemouse work, open a terminal and start Redis using the SIC framework -> in the `framework` folder: redis-server conf/redis/redis.conf
+-	Open a second terminal, go to the following address: SIC\framework\sic_framework\devices\common_franka and execute “franka_motion.py”
+-	Open a third terminal, go to the following address: SIC\framework\sic_framework\tests and execute “demo_franka_spacemouse_control.py” -> you should now be able to move the robot using the spacemouse.
+-	To put the robot back to its home position, go to the following address: SIC\framework\sic_framework\tests and execute “demo_franka_motion_recorder.py”
+Experiment steps:
+-	Make the participants read and sign the consent form.
+-	Make the participants wear gloves.
+-	Make the participants wear a microphone.
+-	Explain to them the 3 ways to interact with the robot and the tasks they will perform.
+-	Start the familiarization phase, where they practice with the 3 modalities one at a time using the two bigger blocks. While they perform the task, time them and add a 20% to that time for the next phase.
+-	Start the experiment. Randomize modalities and tasks. Record the video of each modality and task using the built-in function of OBS studio. For the voice modality, use the caption capture function of OBS studio to record the transcript of the participants instruction while performing the task.
+-	After completing both tasks for each modality, make the participants fill in the NASA TLX form.
+-	At the end of the experiment, make the participants fill in the post-experiment questionnaire.
+
